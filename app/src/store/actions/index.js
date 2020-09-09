@@ -11,6 +11,7 @@ export const fetchCharacters = () => {
       .get("https://rickandmortyapi.com/api/character")
       .then((res) => {
         dispatch({ type: FETCH_CHARACTERS_SUCCESS, payload: res.data.results });
+        console.log(res.data.info.next)
       })
       .catch((error) => {
         dispatch({ type: FETCH_CHARACTERS_ERROR });

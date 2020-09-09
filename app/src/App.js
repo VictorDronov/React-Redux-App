@@ -14,14 +14,14 @@ function App(props) {
   return (
     <div className="App">
       <header>
-        <h1>Your Characters</h1>
-        {!loadingCharacters ? (
-          <CharacterList />
-        ) : (
-          <div>... Finding Mr.Sanchez</div>
-        )}
-        {errorMessage !== "" ? <div>{errorMessage}</div> : null}
+        <h1>Rick and Morty Characters</h1>
       </header>
+      {!loadingCharacters ? (
+        <CharacterList />
+      ) : (
+        <div>... Finding Mr.Sanchez</div>
+      )}
+      {errorMessage !== "" ? <div>{errorMessage}</div> : null}
     </div>
   );
 }
