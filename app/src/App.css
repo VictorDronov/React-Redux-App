@@ -56,3 +56,14 @@ div{
 .origin{
   width: 100%;
 }
+
+/* LOADING */
+
+.loadingBox{
+  display:flex;
+  flex-direction: row;
+  width: 100%
+}
+.loading{
+  font-size: 36px;
+}

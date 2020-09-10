@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   characters: [],
-  loadingCharacters: false,
+  loadingCharacters: true,
   errorMessage: "",
 };
 
@@ -20,14 +20,14 @@ export default (state = initialState, action) => {
     case FETCH_CHARACTERS_ERROR:
       return {
           ...state,
-          loadingCharacters: false,
+          loadingCharacters: true,
           errorMessage: ""
       };
     case FETCH_CHARACTERS_SUCCESS:
       return {
           ...state,
           characters: action.payload,
-          loadingCharacters: false
+          loadingCharacters: true
       };
     default:
       return state;

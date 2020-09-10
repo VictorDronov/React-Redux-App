@@ -3,6 +3,7 @@ import "./App.css";
 import { connect } from "react-redux";
 import CharacterList from "./components/CharacterList";
 import { fetchCharacters } from "./store/actions/index";
+import ClimbingBoxLoader from "react-spinners/ScaleLoader";
 
 function App(props) {
   const { fetchCharacters, loadingCharacters, errorMessage } = props;
@@ -17,11 +18,16 @@ function App(props) {
       <header>
         <h1>Rick and Morty Characters</h1>
       </header>
-      {!loadingCharacters ? (
-        <CharacterList />
-      ) : (
-        <div>... Finding Mr.Sanchez</div>
-      )}
+      <div className="loadingBox">
+        {!loadingCharacters ? (
+          <CharacterList />
+        ) : (
+          <div className="loading">
+            {" "}
+            <ClimbingBoxLoader className="loader" /> Looking For Mr.Sanchez
+          </div>
+        )}
+      </div>
       {errorMessage !== "" ? <div>{errorMessage}</div> : null}
       <button
         onClick={() =>
