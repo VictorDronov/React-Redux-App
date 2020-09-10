@@ -7,7 +7,7 @@
 }
 
 body{
-  background-color: #cecece79;
+  background-color: #cecece9c;
 }
 h1{
   font-family: 'Dokdo', cursive;
@@ -75,7 +75,11 @@ div{
   width: 50%;
   margin-bottom: 3%;
 }
+.numberdiv:hover{
+  transform: scale(0.9);
+}
 
 .number{
   box-shadow: 5px 5px 10px rgb(134, 134, 134);
+  border: none;
 }
