@@ -67,3 +67,15 @@ div{
 .loading{
   font-size: 36px;
 }
+
+
+/*  PAGE NUMBER STYLING */
+
+.pageNumbers{
+  width: 50%;
+  margin-bottom: 3%;
+}
+
+.number{
+  box-shadow: 5px 5px 10px rgb(134, 134, 134);
+}

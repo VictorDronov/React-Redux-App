@@ -17,7 +17,50 @@ function App(props) {
     <div className="App">
       <header>
         <h1>Rick and Morty Characters</h1>
+        <h3>Page: {page}</h3>
       </header>
+      <div className="pageNumbers">
+        <button
+          className="number"
+          onClick={() =>
+            setPage(() => {
+              if (page <= 1) {
+                setPage(1);
+              } else {
+                setPage(page - 1);
+              }
+            })
+          }
+        >
+          Prev
+        </button>
+        <button className="number" onClick={() => setPage(1)}>
+          1
+        </button>
+        <button className="number" onClick={() => setPage(2)}>
+          2
+        </button>
+        <button className="number" onClick={() => setPage(3)}>
+          3
+        </button>
+        <button className="number" onClick={() => setPage(4)}>
+          4
+        </button>
+        <button
+          className="number"
+          onClick={() =>
+            setPage(() => {
+              if (page >= 4) {
+                setPage(1);
+              } else {
+                setPage(page + 1);
+              }
+            })
+          }
+        >
+          Next
+        </button>
+      </div>
       <div className="loadingBox">
         {!loadingCharacters ? (
           <CharacterList />
@@ -30,6 +73,7 @@ function App(props) {
       </div>
       {errorMessage !== "" ? <div>{errorMessage}</div> : null}
       <button
+        className="number"
         onClick={() =>
           setPage(() => {
             if (page <= 1) {
@@ -42,7 +86,20 @@ function App(props) {
       >
         Prev
       </button>
-      <button onClick={() => setPage(page + 1)}>Next</button>
+      <button
+        className="number"
+        onClick={() =>
+          setPage(() => {
+            if (page >= 4) {
+              setPage(1);
+            } else {
+              setPage(page + 1);
+            }
+          })
+        }
+      >
+        Next
+      </button>
     </div>
   );
 }
