@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
+
+* {
+  text-align: center;
+  font-family: "Dokdo", cursive;
+  font-size: 50px;
+}
+
+body {
+  background-color: #cecece9c;
+}
+h1 {
+  font-family: "Dokdo", cursive;
+}
+p {
+  font-size: 25px;
+}
+img {
+  max-height: 200px;
+  border-radius: 50%;
+}
+/* HEADER STYLING*/
+header {
+  width: 100%;
+  border-bottom: 5px solid #27263518;
+  margin: 2% auto;
+}
+/* STYLING FOR THE CHARACTER STUFF*/
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.characterCard {
+  background-color: #6b6c7736;
+  /* border: 2px solid #272635; */
+  padding: 1%;
+  width: 40%;
+  margin-bottom: 2%;
+  border-radius: 20px;
+  box-shadow: 7px 8px 10px #6e6d7ca8;
+}
+.name {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 0;
+}
+.Alive {
+  margin: 0 0;
+  color: green;
+  font-size: 40px;
+}
+.Dead {
+  margin: 0 0;
+  color: red;
+  font-size: 40px;
+}
+.unknown {
+  margin: 0 0;
+  color: rgba(73, 95, 219, 0.87);
+  font-size: 40px;
+}
+.origin {
+  width: 100%;
+}
+.status {
+  width: 100%;
+}
+/* LOADING */
+
+.loadingBox {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.loading {
+  font-size: 36px;
+}
+
+/*  PAGE NUMBER STYLING */
+
+.pageNumbers {
+  width: 50%;
+  margin-bottom: 3%;
+}
+.numberdiv:hover {
+  transform: scale(0.9);
+}
+
+.number {
+  box-shadow: 5px 5px 10px rgb(134, 134, 134);
+  border: none;
+}
+
+/* show and hide details */
+
+.showAndHide {
+  width: 100%;
+  font-size: 30px;
+}
