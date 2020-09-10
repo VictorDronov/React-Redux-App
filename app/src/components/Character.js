@@ -6,7 +6,7 @@ const Character = (props) => {
   console.log(details);
   return (
     <div className="characterCard">
-        <img src={details.image}/>
+        <img alt={details.name} src={details.image}/>
       <h3 className="name">{details.name}</h3>
       <div>
         <p>Species: {details.species}</p>&nbsp;
