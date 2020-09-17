@@ -6,21 +6,23 @@ export const FETCH_CHARACTERS_ERROR = "FETCH_CHARACTERS_ERROR";
 
 export const fetchCharacters = (page) => {
   return (dispatch) => {
-      dispatch({ type: FETCH_CHARACTERS });
+    dispatch({ type: FETCH_CHARACTERS });
     // setTimeout(function () {
-      axios
-        .get(`https://rickandmortyapi.com/api/character?page=${page}`)
-        .then((res) => {
-          dispatch({
-            type: FETCH_CHARACTERS_SUCCESS,
-            payload: res.data.results,
-          });
-          // console.log(res.data.info.next)
-        })
-        .catch((error) => {
-          dispatch({ type: FETCH_CHARACTERS_ERROR });
-          console.log(error);
+    axios
+      .get(`https://rickandmortyapi.com/api/character?page=${page}`)
+      .then((res) => {
+        dispatch({
+          type: FETCH_CHARACTERS_SUCCESS,
+          payload: res.data.results,
         });
+      })
+      .catch((error) => {
+        dispatch({
+          type: FETCH_CHARACTERS_ERROR,
+          payload: { message: "Mr.Sanchez is missing!" },
+        });
+        console.log(error);
+      });
     // }, 1000);
   };
 };

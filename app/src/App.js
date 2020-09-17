@@ -77,7 +77,7 @@ function App(props) {
           <CharacterList />
         ) : (
           <div className="loading">
-            <ScaleLoader className="loader" /> Looking For Mr.Sanchez
+            <ScaleLoader className="loader" />&nbsp; Looking For Mr.Sanchez
           </div>
         )}
       </div>
@@ -122,7 +122,6 @@ function mapStateToProps(state) {
   return {
     loadingCharacters: state.loadingCharacters,
     errorMessage: state.errorMessage,
-    page: state.page,
   };
 }
 
