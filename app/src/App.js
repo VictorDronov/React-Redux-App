@@ -36,26 +36,6 @@ function App(props) {
           </button>
         </div>
         <div className="numberdiv">
-          <button className="number" onClick={() => setPage(1)}>
-            1
-          </button>
-        </div>
-        <div className="numberdiv">
-          <button className="number" onClick={() => setPage(2)}>
-            2
-          </button>
-        </div>
-        <div className="numberdiv">
-          <button className="number" onClick={() => setPage(3)}>
-            3
-          </button>
-        </div>
-        <div className="numberdiv">
-          <button className="number" onClick={() => setPage(4)}>
-            4
-          </button>
-        </div>
-        <div className="numberdiv">
           <button
             className="number"
             onClick={() =>
@@ -77,43 +57,46 @@ function App(props) {
           <CharacterList />
         ) : (
           <div className="loading">
-            <ScaleLoader className="loader" />&nbsp; Looking For Mr.Sanchez
+            <ScaleLoader className="loader" />
+            &nbsp; Looking For Mr.Sanchez
           </div>
         )}
       </div>
       {errorMessage !== "" ? <div>{errorMessage}</div> : null}
-      <div className="numberdiv">
-        <button
-          className="number"
-          onClick={() =>
-            setPage(() => {
-              if (page <= 1) {
-                setPage(1);
-              } else {
-                setPage(page - 1);
-              }
-            })
-          }
-        >
-          Prev
-        </button>
-      </div>
+      <div className="pageNumbers">
+        <div className="numberdiv">
+          <button
+            className="number"
+            onClick={() =>
+              setPage(() => {
+                if (page <= 1) {
+                  setPage(1);
+                } else {
+                  setPage(page - 1);
+                }
+              })
+            }
+          >
+            Prev
+          </button>
+        </div>
 
-      <div className="numberdiv">
-        <button
-          className="number"
-          onClick={() =>
-            setPage(() => {
-              if (page >= 4) {
-                setPage(1);
-              } else {
-                setPage(page + 1);
-              }
-            })
-          }
-        >
-          Next
-        </button>
+        <div className="numberdiv">
+          <button
+            className="number"
+            onClick={() =>
+              setPage(() => {
+                if (page >= 4) {
+                  setPage(1);
+                } else {
+                  setPage(page + 1);
+                }
+              })
+            }
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );

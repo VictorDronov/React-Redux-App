@@ -99,3 +99,19 @@ div {
   width: 100%;
   font-size: 30px;
 }
+
+
+@media (max-width: 1000px){
+  div{
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  .characterCard{
+    width: 50%;
+  }
+  .pageNumbers{
+    width: 100%;
+    flex-direction: row;
+  }
+}
